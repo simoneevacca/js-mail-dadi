@@ -1,0 +1,12 @@
+body {
+    background-color: #800000;
+}
+
+.container {
+    width: 600px;
+    background-color: white;
+}
+
+.mail {
+    width: 100%;
+}

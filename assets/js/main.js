@@ -27,11 +27,7 @@ button.addEventListener('click', function () {
             if (element == userMail.value){
                 canGame.style.display = "block";
 
-            } else {
-                console.log ('no');
-            }
-
-           
+            }  
     }
 }
 )
@@ -51,23 +47,18 @@ spear.addEventListener('click', function () {
     const userNumber = Math.floor(Math.random() * 6) + 1;
     const computerNumber = Math.floor(Math.random() * 6) + 1;
     console.log(userNumber, computerNumber);
-    score.innerHTML = ('tu: ' + userNumber + 'pc: ' + computerNumber)
+    score.innerHTML = ('tu: ' + ' ' + userNumber + ' ' + 'pc: ' + ' ' + computerNumber)
     
 
 if (userNumber > computerNumber) {
 
-    console.log('Hai vinto!!');
     result.innerHTML = ('HAI VINTO!!');
 
 
 } else if (computerNumber > userNumber) {
-
-    console.log("hai perso, ritenta");
     result.innerHTML = ('HAI PERSO');
 
-
 } else {
-    console.log("Pareggio");
     result.innerHTML = ('PAREGGIO');
 
 }
