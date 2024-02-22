@@ -27,3 +27,14 @@ const computerNumber = Math.floor(Math.random() * 6) + 1;
 
 console.log(userNumber, computerNumber);
 
+if (userNumber > computerNumber){
+
+    console.log('Hai vinto!!');
+
+} else if (computerNumber > userNumber){
+
+    console.log("hai perso, ritenta");
+
+} else {
+    console.log("Pareggio");
+}
