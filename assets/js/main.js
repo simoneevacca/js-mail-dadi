@@ -15,7 +15,15 @@ for (let index = 0; index < array.length; index++) {
     const element = array[index];
 
     if (element == userMail) {
-        alert ("Congratulazioni!! Puoi accedere al sito!")
-    }
-    
+        alert ("Congratulazioni!! Puoi accedere al sito!");
+   
 }
+}
+/////////////////// GIOCO DEI DADI //////////////////////
+
+
+const userNumber = Math.floor(Math.random() * 6) + 1;
+const computerNumber = Math.floor(Math.random() * 6) + 1;
+
+console.log(userNumber, computerNumber);
+
