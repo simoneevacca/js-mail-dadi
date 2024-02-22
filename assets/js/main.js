@@ -6,35 +6,71 @@
 
 // check if the insert mail is correct
 
-const userMail = prompt ('inserisci la tua mail');
-console.log(userMail);
+// const userMail = prompt ('inserisci la tua mail');
+// console.log(userMail);
 
+const userMail = document.querySelector('.mail')
 let array = ['simone@mail.com', 'francesco@mail.com', 'marco@mail.com'];
+const button = document.querySelector('.gioca')
+const canGame = document.querySelector('.can-game')
+canGame.style.display = "none";
 
-for (let index = 0; index < array.length; index++) {
-    const element = array[index];
 
-    if (element == userMail) {
-        alert ("Congratulazioni!! Puoi accedere al sito!");
-   
+button.addEventListener('click', function () {
+
+    console.log('gaming...');
+
+
+    for (let index = 0; index < array.length; index++) {
+        const element = array[index];
+
+            if (element == userMail.value){
+                canGame.style.display = "block";
+
+            } else {
+                console.log ('no');
+            }
+
+           
+    }
 }
-}
+)
+
+
 /////////////////// GIOCO DEI DADI //////////////////////
 
 
-const userNumber = Math.floor(Math.random() * 6) + 1;
-const computerNumber = Math.floor(Math.random() * 6) + 1;
+const spear = document.querySelector('.spear');
+const score = document.querySelector('.score');
+const result = document.querySelector('.result');
 
-console.log(userNumber, computerNumber);
 
-if (userNumber > computerNumber){
+
+
+spear.addEventListener('click', function () {
+    const userNumber = Math.floor(Math.random() * 6) + 1;
+    const computerNumber = Math.floor(Math.random() * 6) + 1;
+    console.log(userNumber, computerNumber);
+    score.innerHTML = ('tu: ' + userNumber + 'pc: ' + computerNumber)
+    
+
+if (userNumber > computerNumber) {
 
     console.log('Hai vinto!!');
+    result.innerHTML = ('HAI VINTO!!');
 
-} else if (computerNumber > userNumber){
+
+} else if (computerNumber > userNumber) {
 
     console.log("hai perso, ritenta");
+    result.innerHTML = ('HAI PERSO');
+
 
 } else {
     console.log("Pareggio");
+    result.innerHTML = ('PAREGGIO');
+
 }
+
+}
+)
